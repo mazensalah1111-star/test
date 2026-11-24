@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<title>Our First Month ❤</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💌</text></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+:root{--wine:#5c0a1c;--deep:#2a0410;--rose:#c9304d;--gold:#e0b861;--cream:#f3e6cf;--ink:#3a0c14;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:radial-gradient(120% 80% at 50% 0,#7a1028 0,var(--wine) 40%,var(--deep) 100%) fixed;color:var(--cream);font:400 20px/1.6 'Cormorant Garamond',Georgia,serif;overflow-x:hidden}
+#fx{position:fixed;inset:0;pointer-events:none;z-index:1}
+section{position:relative;z-index:2;min-height:100svh;padding:12vh 22px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:18px}
+h1,h2{font-family:'Great Vibes',cursive;font-weight:400;color:var(--gold);text-shadow:0 0 24px #e0b86155}
+h1{font-size:clamp(54px,14vw,120px);line-height:1}h2{font-size:clamp(40px,9vw,64px)}
+.sub{letter-spacing:.35em;text-transform:uppercase;font-size:13px;color:var(--gold);opacity:.85}
+.btn{background:linear-gradient(135deg,#e8c876,#b8893a);color:#3a0c14;border:0;border-radius:40px;padding:14px 30px;font:600 19px 'Cormorant Garamond',serif;cursor:pointer;text-decoration:none;display:inline-block;box-shadow:0 8px 30px #0006;transition:transform .2s}
+.btn:active{transform:scale(.95)}
+/* intro */
+#intro{position:fixed;inset:0;z-index:50;background:radial-gradient(100% 70% at 50% 30%,#7a1028,#2a0410);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:26px;transition:opacity 1.2s,visibility 1.2s}
+#intro.gone{opacity:0;visibility:hidden}
+#intro .t{font:italic 44px 'Cormorant Garamond',serif;color:var(--gold)}
+.env{position:relative;width:min(320px,80vw);aspect-ratio:1.5;background:#8a1230;border-radius:6px;box-shadow:0 30px 60px #000a;cursor:pointer;animation:float 3s ease-in-out infinite}
+.env:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,transparent 50%,#6e0d27 50%) left/50% 100% no-repeat,linear-gradient(225deg,transparent 50%,#6e0d27 50%) right/50% 100% no-repeat;border-radius:6px}
+.flap{position:absolute;left:0;right:0;top:0;height:62%;background:#a3173a;clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top;transition:transform .9s}
+.env.open .flap{transform:rotateX(180deg)}
+.seal{position:absolute;left:50%;top:62%;width:62px;height:62px;margin:-31px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#f4dc92,#b8893a);display:grid;place-items:center;font-size:30px;color:#7a1028;box-shadow:0 4px 12px #0008;transition:opacity .5s}
+.env.open .seal{opacity:0}
+@keyframes float{50%{transform:translateY(-10px)}}
+/* counter */
+.count{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.count div{background:#ffffff12;border:1px solid #e0b86155;border-radius:14px;padding:12px 16px;min-width:76px;backdrop-filter:blur(6px)}
+.count b{display:block;font:600 34px 'Cormorant Garamond',serif;color:var(--gold)}
+input[type=date]{background:#ffffff14;border:1px solid #e0b86188;color:var(--cream);padding:8px 14px;border-radius:10px;font:18px 'Cormorant Garamond',serif}
+/* letter */
+.paper{max-width:620px;background:linear-gradient(#f6ead2,#e8d6b4);color:var(--ink);border-radius:4px 4px 10px 10px;padding:54px 30px 34px;position:relative;box-shadow:0 30px 70px #000a;clip-path:polygon(0 1%,4% 0,9% 1%,15% 0,22% 1%,30% 0,38% 1%,46% 0,55% 1%,63% 0,72% 1%,80% 0,88% 1%,95% 0,100% 1%,100% 99%,95% 100%,88% 99%,80% 100%,70% 99%,60% 100%,50% 99%,38% 100%,28% 99%,16% 100%,8% 99%,0 100%)}
+.paper h3{font:600 24px 'Cormorant Garamond',serif;text-decoration:underline;margin-bottom:16px;letter-spacing:.06em}
+.paper p{text-align:justify;font-size:21px;min-height:12em}
+.wax{position:absolute;left:50%;top:-34px;margin-left:-34px;width:68px;height:68px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#e0405c,#8a0f28);display:grid;place-items:center;font-size:30px;box-shadow:0 6px 14px #0008}
+/* cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;width:min(900px,100%)}
+.card{perspective:800px;height:200px;cursor:pointer}
+.card i{position:absolute;inset:0;border-radius:14px;display:grid;place-items:center;padding:16px;backface-visibility:hidden;transition:transform .7s;font-style:normal}
+.card{position:relative}
+.card .f{background:linear-gradient(135deg,#9c1838,#6a0b22);border:1px solid var(--gold);font:italic 26px 'Cormorant Garamond',serif;color:var(--gold)}
+.card .b{background:var(--cream);color:var(--ink);transform:rotateY(180deg);font-size:20px}
+.card.on .f{transform:rotateY(180deg)}.card.on .b{transform:rotateY(0)}
+/* game */
+#arena{position:relative;width:min(560px,100%);height:340px;border:1px dashed #e0b86177;border-radius:18px;overflow:hidden;background:#00000022}
+.h{position:absolute;font-size:34px;cursor:pointer;user-select:none;animation:rise linear forwards}
+@keyframes rise{from{transform:translateY(0)}to{transform:translateY(-380px)}}
+#secret{font-size:24px;max-width:560px;opacity:0;transition:opacity 1.5s;min-height:3em}
+/* gift */
+.gift{position:relative;width:170px;height:170px;cursor:pointer;margin-top:30px}
+.gift .box{position:absolute;bottom:0;width:100%;height:110px;background:linear-gradient(90deg,#a3173a 43%,var(--gold) 43% 57%,#a3173a 57%);border-radius:0 0 8px 8px;box-shadow:0 20px 40px #0009}
+.gift .lid{position:absolute;bottom:105px;left:-10px;width:190px;height:34px;background:linear-gradient(90deg,#b81d44 43%,#f0cf7e 43% 57%,#b81d44 57%);border-radius:6px;transition:transform .9s;transform-origin:left bottom}
+.gift.open .lid{transform:translate(40px,-90px) rotate(28deg);opacity:.0}
+.gift .lid:before,.gift .lid:after{content:"";position:absolute;top:-26px;width:42px;height:32px;border:7px solid var(--gold);border-radius:50% 50% 0 50%}
+.gift .lid:before{left:50%;margin-left:-44px}.gift .lid:after{left:50%;margin-left:2px;transform:scaleX(-1)}
+#coupons{display:none}.coupon{background:var(--cream);color:var(--ink);border-radius:12px;padding:20px;position:relative;border-left:10px dotted var(--rose);text-align:left}
+.coupon button{margin-top:10px;background:var(--rose);color:#fff;border:0;border-radius:20px;padding:6px 18px;font:600 17px 'Cormorant Garamond';cursor:pointer}
+.coupon.used{opacity:.55;filter:grayscale(.7)}
+.song{max-width:460px;background:#ffffff10;border:1px solid #e0b86166;border-radius:20px;padding:26px;backdrop-filter:blur(8px)}
+.disc{width:120px;height:120px;border-radius:50%;margin:0 auto 14px;background:conic-gradient(#2a0410,#7a1028,#2a0410,#7a1028,#2a0410);border:4px solid var(--gold);animation:spin 6s linear infinite;position:relative}
+.disc:after{content:"";position:absolute;inset:40px;border-radius:50%;background:var(--gold)}
+@keyframes spin{to{transform:rotate(360deg)}}
+.reveal{opacity:0;transform:translateY(30px);transition:1s}.reveal.in{opacity:1;transform:none}
+</style></head><body>
+<canvas id="fx"></canvas>
+
+<div id="intro"><div class="sub">for my favorite person</div><div class="t">Open it</div>
+<div class="env" id="env"><div class="flap"></div><div class="seal">♥</div></div><div class="sub">tap the envelope</div></div>
+
+<section id="home">
+ <div class="sub">With all my love</div><h1>Our First Month</h1>
+ <div class="count" id="count"></div>
+ <label class="sub">Our day: <input type="date" id="since"></label>
+ <a class="btn" href="#letter">Read my letter ♥</a>
+</section>
+
+<section id="letter" class="reveal">
+ <div class="paper"><div class="wax">♥</div><h3>TO MY FAV PERSON</h3><p id="msg"></p></div>
+</section>
+
+<section id="when" class="reveal">
+ <h2>Open when…</h2><div class="sub">tap a card</div>
+ <div class="grid">
+  <div class="card"><i class="f">…you miss me</i><i class="b">Close your eyes and breathe. I’m right here in your heart, always.</i></div>
+  <div class="card"><i class="f">…you’re sad</i><i class="b">You are loved more than you know. Whatever today is, we face it together.</i></div>
+  <div class="card"><i class="f">…you need to smile</i><i class="b">Remember my eyes looking into yours. That smile of yours is my favorite place.</i></div>
+  <div class="card"><i class="f">…you can’t sleep</i><i class="b">Think of me, think of us, and let the quiet carry you to sweet dreams, princess.</i></div>
+ </div>
+</section>
+
+<section id="play" class="reveal">
+ <h2>Catch my hearts</h2><div class="sub">collect 10 hearts to unlock a secret</div>
+ <div id="arena"></div><div class="sub" id="score">0 / 10</div><div id="secret"></div>
+</section>
+
+<section id="giftsec" class="reveal">
+ <h2>A gift for you</h2><div class="sub" id="gh">tap the gift</div>
+ <div class="gift" id="gift"><div class="lid"></div><div class="box"></div></div>
+ <div class="grid" id="coupons">
+  <div class="coupon">A hug that lasts as long as you want<br><button>Redeem</button></div>
+  <div class="coupon">A movie night, you choose everything<br><button>Redeem</button></div>
+  <div class="coupon">One date, my treat, your pick<br><button>Redeem</button></div>
+  <div class="coupon">A sweet surprise, any day you ask<br><button>Redeem</button></div>
+ </div>
+</section>
+
+<section id="sky" class="reveal">
+ <h2>Make a wish</h2><div class="sub">the night sky is ours</div>
+ <button class="btn" id="wish">Send a wish ✦</button><div id="wt" style="min-height:2em;font-style:italic"></div>
+</section>
+
+<section id="music" class="reveal">
+ <h2>Our song</h2>
+ <div class="song"><div class="disc"></div><p>Press play and let it carry us.</p><br>
+ <a class="btn" href="https://youtu.be/GxldQ9eX2wo?si=Pv1ORt0pKNv03TYh" target="_blank" rel="noopener">▶ Listen to our song</a></div>
+</section>
+
+<section id="end" class="reveal">
+ <h1 style="font-size:clamp(42px,11vw,90px)">Here’s to another month of us</h1>
+ <p style="max-width:520px">and to all the beautiful months waiting for us, babe.</p>
+ <button class="btn" id="boom">Tap for love ♥</button>
+</section>
+
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const M="We’ve been together for a month, and it feels a little more special because I get to spend every moment with you, looking into your eyes. I hope this month brings us more beautiful moments, more memories, and more reasons to smile together. No matter how many months and years pass, I’ll always choose you. My heart will never get tired of loving you, princess, and I’ll always be grateful that you’re the person I get to share my life with. Here’s to another month of us, and to all the beautiful months waiting for us, babe.";
+const st=k=>{try{return localStorage.getItem(k)}catch(e){return null}},sv=(k,v)=>{try{localStorage.setItem(k,v)}catch(e){}};
+/* background fx */
+const cv=$('#fx'),cx=cv.getContext('2d');let P=[];
+function rs(){cv.width=innerWidth;cv.height=innerHeight}rs();addEventListener('resize',rs);
+function spawn(x,y,n,burst){for(let i=0;i<n;i++)P.push({x:x??Math.random()*cv.width,y:y??cv.height+20,vx:burst?(Math.random()-.5)*8:(Math.random()-.5)*.6,vy:burst?-Math.random()*7-2:-Math.random()*1.2-.4,s:8+Math.random()*16,a:1,c:['♥','❤','✦','🌹'][Math.random()*4|0],g:burst?.15:0,l:burst?1:0})}
+(function loop(){cx.clearRect(0,0,cv.width,cv.height);if(Math.random()<.06&&P.length<70)spawn(null,null,1);
+ P=P.filter(p=>p.y>-40&&p.a>0);for(const p of P){p.x+=p.vx;p.y+=p.vy;p.vy+=p.g;if(p.l)p.a-=.012;cx.globalAlpha=Math.max(p.a,0)*.7;cx.font=p.s+'px serif';cx.fillStyle=p.c=='✦'?'#f3d98a':'#e04a68';cx.fillText(p.c,p.x,p.y)}requestAnimationFrame(loop)})();
+/* intro */
+$('#env').onclick=()=>{$('#env').classList.add('open');spawn(innerWidth/2,innerHeight/2,40,1);setTimeout(()=>$('#intro').classList.add('gone'),1300)};
+/* counter */
+const sd=$('#since');sd.value=st('since')||new Date().toISOString().slice(0,10);
+function tick(){const d=new Date(sd.value+'T00:00:00'),n=Date.now()-d,t=Math.max(n,0)/1000;
+ const v=[['days',t/86400|0],['hours',t/3600%24|0],['minutes',t/60%60|0],['seconds',t%60|0]];
+ $('#count').innerHTML=v.map(a=>`<div><b>${a[1]}</b>${a[0]}</div>`).join('')}
+sd.onchange=()=>{sv('since',sd.value);tick()};tick();setInterval(tick,1000);
+/* reveal + typewriter */
+let typed=0;const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');
+ if(e.target.id=='letter'&&!typed){typed=1;let i=0;const p=$('#msg');(function t(){p.textContent=M.slice(0,i+=2);if(i<M.length)setTimeout(t,22);else p.textContent=M})()}}}),{threshold:.3});
+$$('.reveal').forEach(e=>io.observe(e));
+/* cards */
+$$('.card').forEach(c=>c.onclick=()=>c.classList.toggle('on'));
+/* game */
+let sc=0;const ar=$('#arena');
+setInterval(()=>{if(sc>=10||ar.getBoundingClientRect().top>innerHeight)return;const h=document.createElement('div');h.className='h';h.textContent=['❤','💖','💗','🌹'][Math.random()*4|0];
+ h.style.left=Math.random()*88+'%';h.style.top='320px';h.style.animationDuration=(3+Math.random()*2.5)+'s';
+ h.onclick=e=>{h.remove();sc++;$('#score').textContent=sc+' / 10';spawn(e.clientX,e.clientY,6,1);
+  if(sc==10){$('#secret').style.opacity=1;$('#secret').textContent='Here’s the secret: I’ll always choose you. 💌';spawn(innerWidth/2,innerHeight/2,50,1)}};
+ ar.appendChild(h);setTimeout(()=>h.remove(),6000)},650);
+/* gift */
+const gf=$('#gift');gf.onclick=()=>{if(gf.classList.contains('open'))return;gf.classList.add('open');$('#gh').textContent='Happy one month, my love ♥';spawn(innerWidth/2,innerHeight/2,70,1);$('#coupons').style.display='grid'};
+$$('.coupon').forEach((c,i)=>{const b=c.querySelector('button');if(st('c'+i)){c.classList.add('used');b.textContent='Redeemed ♥'}
+ b.onclick=()=>{c.classList.add('used');b.textContent='Redeemed ♥';sv('c'+i,1);spawn(innerWidth/2,innerHeight/2,25,1)}});
+/* wish + end */
+$('#wish').onclick=()=>{$('#wt').textContent='Your wish is on its way… and I promise to help it come true. ✦';spawn(innerWidth/2,innerHeight/2,40,1)};
+$('#boom').onclick=()=>{for(let i=0;i<4;i++)setTimeout(()=>spawn(Math.random()*innerWidth,innerHeight*.6,40,1),i*250)};
+</script></body></html>
